@@ -17,6 +17,10 @@ public class Autor {
         System.out.println("Autor: " +  this.nombre + " " + this.apellido + " - " + this.email);
     }
 
+    public String getNombreApellidoAutor(){
+        return this.nombre + " " + this.apellido;
+    }
+
     public String getNombre(){
         return this.nombre;
     }

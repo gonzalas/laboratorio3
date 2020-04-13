@@ -1,20 +1,18 @@
 package ejercicio1;
 
+import java.util.List;
+
 public class Libro {
     private String titulo;
     private double precio;
     private int stock;
-    private Autor autor;
+    private List<Autor> autores;
 
-    public Libro (String titulo, double precio, int stock, Autor autor){
+    public Libro (String titulo, double precio, int stock, List<Autor> autores){
         this.titulo = titulo;
         this.precio = precio;
         this.stock = stock;
-        this.autor = autor;
-    }
-
-    public void imprimirLibro(){
-        System.out.println("Libro: " + this.titulo + ". Precio: $" + this.precio + ". Stock: " + this.stock + " copias. Autor: " + this.autor.getNombre() + " " + this.autor.getApellido());
+        this.autores = autores;
     }
 
     public void setPrecio(double precio){
@@ -29,11 +27,14 @@ public class Libro {
         this.stock += stock;
     }
 
-    public void mostrarDatosAutor(){
-        System.out.println(this.autor.getNombre() + " " + this.autor.getApellido() + " - " + this.autor.getEmail());
+    public String listarAutores(){
+        String listadoAutores = "";
+        for(Autor autor : autores){
+            listadoAutores += autor.getNombreApellidoAutor() + ", ";
+        }
+        return listadoAutores;
     }
-
     public void mensajeLibro(){
-        System.out.println("El libro " + this.titulo + " de " + this.autor.getNombre() + " " + this.autor.getApellido() + " se vende a " + this.precio + " pesos.");
+        System.out.println("El libro " + this.titulo + " de " + listarAutores() + " se vende a " + this.precio + " pesos.");
     }
 }

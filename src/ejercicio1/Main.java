@@ -22,29 +22,26 @@ cambios necesarios en el método del punto g, para imprimir un nuevo
 mensaje que liste los autores que contribuyeron a ese libro.
  */
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[]args){
 
-        Autor autor = new Autor ("Joshua", "Bloch", "joshua@email.com", 'M');
+        Autor autor1 = new Autor ("Joshua", "Bloch", "joshua@email.com", 'M');
+        Autor autor2 = new Autor("Susan", "Jones", "susanjones@email.com", 'F');
+        Autor autor3 = new Autor("Charles", "Darwin", "cd@email.com", 'M');
 
-        //Imprimir datos autor
-        System.out.println("Datos autor:");
-        autor.imprimirAutor();
+        List<Autor> autores = new ArrayList<>();
+        autores.add(autor1);
+        autores.add(autor2);
+        autores.add(autor3);
 
-        Libro libro = new Libro("Effective Java", 450, 150, autor);
+        Libro libro = new Libro("Effective Java", 450, 150, autores);
 
-        //Imprimir datos libro
-        System.out.println("Datos libro:");
-        libro.imprimirLibro();
 
-        //Cambiar precio del libro a 500 y aumentar el stock en 50
-        libro.setPrecio(500);
-        libro.aumentarStock(50);
-
-        //Mostrar datos autor desde clase Libro
-        System.out.println("Mostrar datos autor desde clase Libro:");
-        libro.mostrarDatosAutor();
 
         //Mostrar mensaje sobre el libro
         System.out.println("Mensaje sobre el libro");
