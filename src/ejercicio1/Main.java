@@ -42,7 +42,7 @@ public class Main {
         System.out.println(cy2);
 
         Cylinder cy = new Cylinder(5, 10, "blue");
-        System.out.println(cy);        
+        System.out.println(cy);
         System.out.println("Area cylinder: " + cy.getArea());
         System.out.println("Volume cylinder: " + cy.getVolume());
     }
