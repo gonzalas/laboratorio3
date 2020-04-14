@@ -12,3 +12,9 @@ Contiene los ejercicios de la Guía de Objetos 2
 Aclaración: En el ejercicio 1, revisar en los **commits** para ver los cambios entre el libro con autor simple y luego con list de autores
 
 
+
+
+#### Branch guia-objetos-3
+Contiene los tres ejercicios de la Guía de Objetos 3
+
+
