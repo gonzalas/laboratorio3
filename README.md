@@ -18,3 +18,9 @@ Aclaración: En el ejercicio 1, revisar en los **commits** para ver los cambios 
 Contiene los tres ejercicios de la Guía de Objetos 3
 
 
+
+
+#### Branch guia-objetos-4
+Contiene el ejercicio sobre el videoclub
+
+
